@@ -31,7 +31,11 @@ pub fn main() void {
         } else if (age >= 18 and age <= 60) {
             std.debug.print("Vous avez {d} ans, vous pouvez donc entrer !", .{age});
         } else {
-            std.debug.print("❌ ERREUR ❌ Vous n'êtes pas né !!!", .{});
+            std.debug.print("❌ ERREUR ❌ Vous n'êtes pas né !!!\n", .{});
         }
+        const fullLife = true;
+        var lifeBar: u8 = 0;
+        lifeBar += if (fullLife) 100 else 50;
+        std.debug.print("Vous avez {d}% de votre santé.\n", .{lifeBar});
     }
 }
