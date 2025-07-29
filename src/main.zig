@@ -1,3 +1,4 @@
+// Import
 const std = @import("std");
 
 pub fn main() void {
@@ -37,5 +38,16 @@ pub fn main() void {
         var lifeBar: u8 = 0;
         lifeBar += if (fullLife) 100 else 50;
         std.debug.print("Vous avez {d}% de votre santé.\n", .{lifeBar});
+    }
+
+    {
+        // --- Boucle While ---
+        std.debug.print("\n⚡ Boucle While ⚡\n", .{});
+        var i: u8 = 0;
+        while (i < 12) : (i += 1) {
+            if (i % 2 == 0) continue;
+            if (i == 11) break;
+            std.debug.print("i = {d}\n", .{i});
+        }
     }
 }
