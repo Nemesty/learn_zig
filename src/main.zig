@@ -2,8 +2,9 @@
 const std = @import("std");
 
 pub fn main() void {
+
+    // --- Variables et constantes ---
     {
-        // --- Variables et constantes ---
         std.debug.print("\n⚡ Variable et constantes ⚡\n", .{});
         const pi = 3.14;
         var age: u8 = undefined;
@@ -13,8 +14,8 @@ pub fn main() void {
         std.debug.print("Tu as {d} ans !\n", .{age});
     }
 
+    // --- Tableaux ---
     {
-        // --- Tableaux ---
         std.debug.print("\n⚡ Tableaux ⚡\n", .{});
         const hey = [3]u8{ 'H', 'e', 'y' };
         const google = [_]u8{ 'G', 'o', 'o', 'g', 'l', 'e' };
@@ -22,8 +23,8 @@ pub fn main() void {
         std.debug.print("La longueur du tableau google est : {d}\n", .{google.len});
     }
 
+    // --- Conditions ---
     {
-        // --- Conditions ---
         std.debug.print("\n⚡ Conditions ⚡\n", .{});
         var age: i8 = -2;
         age += 1;
@@ -40,8 +41,8 @@ pub fn main() void {
         std.debug.print("Vous avez {d}% de votre santé.\n", .{lifeBar});
     }
 
+    // --- Boucle While ---
     {
-        // --- Boucle While ---
         std.debug.print("\n⚡ Boucle While ⚡\n", .{});
         var i: u8 = 0;
         while (i < 12) : (i += 1) {
@@ -49,5 +50,17 @@ pub fn main() void {
             if (i == 11) break;
             std.debug.print("i = {d}\n", .{i});
         }
+    }
+
+    // --- Boucle For ---
+    {
+        std.debug.print("\n⚡ Boucle For ⚡\n", .{});
+        const pseudo = [_]u8{ 'N', 'e', 'm', 'e', 's', 't', 'y' };
+        std.debug.print("Bonjour ", .{});
+        for (pseudo, 0..) |character, index| {
+            _ = index;
+            std.debug.print("{c}", .{character});
+        }
+        std.debug.print(" !", .{});
     }
 }
