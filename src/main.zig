@@ -3,7 +3,7 @@ const std = @import("std");
 
 // --- Fonction sans argument ni retour ---
 fn sayWelcome() void {
-    std.debug.print("\n⚡⚡⚡ Zig, le langage en action ! ⚡⚡⚡\n", .{});
+    std.debug.print("\n⚡⚡⚡ Zig, en action ! ⚡⚡⚡\n", .{});
 }
 
 // --- Fonction avec argument sans retour ---

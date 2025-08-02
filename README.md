@@ -1,2 +1,2 @@
-# ⚡⚡⚡ Zig, le langage en action ! ⚡⚡⚡
+# ⚡⚡⚡ Zig, en action ! ⚡⚡⚡
 ## A project to learn the Zig language
