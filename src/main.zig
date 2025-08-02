@@ -3,12 +3,12 @@ const std = @import("std");
 
 // --- Fonction sans argument ni retour ---
 fn sayWelcome() void {
-    std.debug.print("\n⚡⚡⚡ Zig, en action ! ⚡⚡⚡\n", .{});
+    std.debug.print("\n⚡⚡⚡ Zig, en action ! ⚡⚡⚡\n\n", .{});
 }
 
 // --- Fonction avec argument sans retour ---
 fn showTitle(title: []const u8) void {
-    std.debug.print("\n\n⚡ {s} ⚡ \n", .{title});
+    std.debug.print("\n⚡ {s} ⚡ \n", .{title});
 }
 
 // --- Fonction Main, le point de départ de tout programe executable ---
@@ -23,7 +23,7 @@ pub fn main() void {
         age = 33;
         age += 1;
         std.debug.print("La valeur de PI est de {d}\n", .{pi});
-        std.debug.print("Tu as {d} ans !", .{age});
+        std.debug.print("Tu as {d} ans !\n", .{age});
     }
 
     // --- Tableaux ---
@@ -32,7 +32,7 @@ pub fn main() void {
         const hey = [3]u8{ 'H', 'e', 'y' };
         const google = [_]u8{ 'G', 'o', 'o', 'g', 'l', 'e' };
         std.debug.print("La première lettre du tableau hey est : {c}\n", .{hey[0]});
-        std.debug.print("La longueur du tableau google est : {d}", .{google.len});
+        std.debug.print("La longueur du tableau google est : {d}\n", .{google.len});
     }
 
     // --- Conditions ---
@@ -50,7 +50,7 @@ pub fn main() void {
         const fullLife = true;
         var lifeBar: u8 = 0;
         lifeBar += if (fullLife) 100 else 50;
-        std.debug.print("Vous avez {d}% de votre santé.", .{lifeBar});
+        std.debug.print("Vous avez {d}% de votre santé.\n", .{lifeBar});
     }
 
     // --- Boucle While ---
@@ -60,7 +60,7 @@ pub fn main() void {
         while (i < 12) : (i += 1) {
             if (i % 2 == 0) continue;
             if (i == 11) break;
-            std.debug.print("i = {d}", .{i});
+            std.debug.print("i = {d}\n", .{i});
         }
     }
 
@@ -73,6 +73,6 @@ pub fn main() void {
             _ = index;
             std.debug.print("{c}", .{character});
         }
-        std.debug.print(" !", .{});
+        std.debug.print(" !\n", .{});
     }
 }
