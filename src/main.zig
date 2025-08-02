@@ -11,6 +11,7 @@ fn showTitle(title: []const u8) void {
     std.debug.print("\n\n⚡ {s} ⚡ \n", .{title});
 }
 
+// --- Fonction Main, le point de départ de tout programe executable ---
 pub fn main() void {
     sayWelcome();
 
