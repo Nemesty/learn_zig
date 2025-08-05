@@ -66,4 +66,21 @@ pub fn main() void {
         }
         std.debug.print(" !\n", .{});
     }
+
+    // --- Appel d'une fonction ---
+    {
+        fun.showTitle("Appel d'une fonction");
+        const num1 = 40;
+        const num2 = 2;
+        const result = fun.addNumber(num1, num2);
+        std.debug.print("{d} + {d} = {d}\n", .{ num1, num2, result });
+    }
+
+    // --- Defer ---
+    {
+        fun.showTitle("Deffer");
+        defer std.debug.print("Je suis la 1re instruction et pourtant c'est moi qui vous dit \"Au revoir ! 👋\" \n", .{});
+        defer std.debug.print("Il fait beau aujourd'hui.\n", .{});
+        defer std.debug.print("Bonjour !\n", .{});
+    }
 }
