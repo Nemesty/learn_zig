@@ -81,6 +81,6 @@ pub fn main() void {
         fun.showTitle("Deffer");
         defer std.debug.print("Je suis la 1re instruction et pourtant c'est moi qui vous dit \"Au revoir ! 👋\" \n", .{});
         defer std.debug.print("Il fait beau aujourd'hui.\n", .{});
-        defer std.debug.print("Bonjour !\n", .{});
+        std.debug.print("Bonjour !\n", .{});
     }
 }
