@@ -32,7 +32,7 @@ pub fn main() void {
         var age: i8 = -2;
         age += 1;
         if ((age < 18 and age > 0) or age > 60) {
-            std.debug.print("Vous avez {d} ans, vous ne pouvez donc pas entrer.\n", .{age});
+            std.debug.print("Vous avez {d} an(s), vous ne pouvez donc pas entrer.\n", .{age});
         } else if (age >= 18 and age <= 60) {
             std.debug.print("Vous avez {d} ans, vous pouvez donc entrer !", .{age});
         } else {
