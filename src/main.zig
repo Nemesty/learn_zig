@@ -83,4 +83,14 @@ pub fn main() void {
         defer std.debug.print("J'ai la tête sens dessus dessous. 😵\n", .{});
         std.debug.print("Bienvenue dans le monde à l'envers !\n", .{});
     }
+
+    // --- Erreurs & Tests ---
+    {
+        fun.showTitle("Erreurs");
+        const pokemon_id = fun.getPokemon(152) catch |err| {
+            std.debug.print("Erreur : {}", .{err});
+            return;
+        };
+        std.debug.print("Pokémon ID : {d}", .{pokemon_id});
+    }
 }

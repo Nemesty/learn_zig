@@ -1,4 +1,7 @@
 const std = @import("std");
+
+const IndexError = error{OutOfMemory};
+
 // --- Fonctions ---
 
 // --- Fonction sans argument ni retour ---
@@ -14,4 +17,11 @@ pub fn showTitle(title: []const u8) void {
 // --- Fonction avec argument et retour ---
 pub fn addNumber(a: u8, b: u8) u8 {
     return a + b;
+}
+
+pub fn getPokemon(index: u8) IndexError!u8 {
+    if (index >= 152) {
+        return IndexError.OutOfMemory;
+    }
+    return index;
 }
