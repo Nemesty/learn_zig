@@ -19,6 +19,7 @@ pub fn addNumber(a: u8, b: u8) u8 {
     return a + b;
 }
 
+// --- Fonction avec argument, retour et erreur ---
 pub fn getPokemon(index: u8) IndexError!u8 {
     if (index >= 152) {
         return IndexError.OutOfMemory;
